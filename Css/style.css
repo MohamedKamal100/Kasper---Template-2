@@ -1,0 +1,101 @@
+/* start variables */
+:root {
+  --bg-blue: #156479;
+  --p-color: #84959c;
+  --main-color: #21cdfb;
+  --transition-duration: 0.5s;
+}
+/* end variables */
+
+/* Start global Rules  */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: black;
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+.container {
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* End global rules */
+/* star components */
+
+/* End special heading */
+/* Start header  */
+header {
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 30px);
+  left: 15px;
+  height: 1px;
+  background-color: #6262ff;
+}
+.logo img {
+  height: 45px;
+}
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul a {
+  padding: 40px 10px;
+  font-size: 14px;
+  transition: var(--transition-duration);
+  position: relative;
+  z-index: 2;
+}
+header nav ul li a.active,
+header nav ul a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+header .form {
+  position: relative;
+  width: 30px;
+  height: 40px;
+  margin-left: 30px;
+  border-left: 1px white solid;
+}
+header .form i {
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+/* ------------------------------------------------------- */
