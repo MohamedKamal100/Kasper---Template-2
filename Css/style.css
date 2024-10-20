@@ -1,8 +1,8 @@
 /* start variables */
 :root {
-  --bg-blue: #156479;
   --p-color: #84959c;
-  --main-color: #21cdfb;
+  --transparent-color: rgb(15 116 143 / 0.7);
+  --main-color: #19c8fa;
   --transition-duration: 0.5s;
 }
 /* end variables */
@@ -13,7 +13,6 @@
 }
 body {
   font-family: "Work Sans", sans-serif;
-  background-color: black;
 }
 img {
   width: 100%;
@@ -42,12 +41,17 @@ html {
 /* End special heading */
 /* Start header  */
 header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  min-height: 97px;
 }
 header .container::after {
   content: "";
@@ -56,10 +60,10 @@ header .container::after {
   width: calc(100% - 30px);
   left: 15px;
   height: 1px;
-  background-color: #6262ff;
+  background-color: #918f8f;
 }
 .logo img {
-  height: 45px;
+  height: 40px;
 }
 header nav {
   flex: 1;
@@ -67,11 +71,17 @@ header nav {
   justify-content: flex-end;
   align-items: center;
 }
+header nav .toggle-menu {
+  color: white;
+  font-size: 22px;
+}
+
 header nav ul {
   display: flex;
 }
 header nav ul a {
   padding: 40px 10px;
+  text-transform: capitalize;
   font-size: 14px;
   transition: var(--transition-duration);
   position: relative;
@@ -96,6 +106,81 @@ header .form i {
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
+  transition: var(--transition-duration);
+}
+header .form i:hover {
+  scale: 1.2;
+  color: var(--main-color);
 }
 
 /* ------------------------------------------------------- */
+/* -----------Start landing -------------------------- */
+.landing {
+  background-color: rgb(38, 37, 36);
+  background-image: url(../photo/landing.jpg);
+  /* background-position: center center; */
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+.landing .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.landing .text {
+  position: absolute;
+  background-color: var(--transparent-color);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.landing .text .content {
+  max-width: 500px;
+}
+.landing .text .content h2 {
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+.landing .text .content p {
+  font-size: 15px;
+  line-height: 2;
+  font-weight: normal;
+}
+.landing .change-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ddd;
+}
+.landing .left {
+  left: 30px;
+}
+.landing .right {
+  right: 30px;
+}
+.bullets {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  display: flex;
+}
+.bullets li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-inline: 5px;
+}
+.bullets li.active {
+  background-color: var(--main-color);
+}
+/* -----------End landing -------------------------- */
