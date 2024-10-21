@@ -392,3 +392,46 @@ header .form i:hover {
 .more:hover {
   background-color: #0c4656;
 }
+/* ----------------------------------------------------- */
+.video {
+  position: relative;
+}
+.video::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+}
+.video video {
+  width: 100%;
+}
+.video .text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background-color: var(--transparent-color);
+  text-align: center;
+  padding: 50px;
+}
+.video .text h2 {
+  padding: 0 0 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.video .text p {
+  padding-bottom: 10px;
+}
+.video .text a {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  width: fit-content;
+  display: block;
+  margin: 40px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: (--transition-duration);
+}
