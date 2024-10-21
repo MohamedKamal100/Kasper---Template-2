@@ -15,9 +15,10 @@
 body {
   font-family: "Work Sans", sans-serif;
 }
-img {
+/* img {
   width: 100%;
-}
+  display: block;
+} */
 ul {
   list-style: none;
   margin: 0;
@@ -258,4 +259,136 @@ header .form i:hover {
 .services .srv-content .srv-box p {
   line-height: 2;
   color: var(--p-color);
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* Start design */
+.design {
+  padding-block: var(--section-padding);
+  height: 600px;
+  position: relative;
+  background-image: url("../photo/design-features.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.design::before {
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+.design .image-design,
+.design .text {
+  position: relative;
+  flex: 1;
+}
+.design .image-design {
+  text-align: center;
+}
+.image-design img {
+  position: relative;
+  bottom: -150px;
+}
+.design .text {
+  padding: 50px;
+  background-color: var(--transparent-color);
+  color: white;
+}
+.design .text h2 {
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.design .text ul li {
+  padding: 14px;
+  transition: var(--transition-duration);
+}
+.design .text ul li::before {
+  content: "\f390";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+
+  padding-right: 25px;
+  position: relative;
+  top: 1px;
+}
+.design .text ul li:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* ------End Design section ----------------------------- */
+/* ------------start portfolio------------------ */
+.portfolio {
+  padding-block: var(--section-padding);
+}
+.shuffle ul {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shuffle ul li {
+  padding: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.shuffle ul li.active {
+  background-color: var(--main-color);
+}
+.shuffle ul li:hover {
+  background-color: rgb(138, 138, 208);
+}
+.images {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.images .box {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+.images .box img {
+  width: 100%;
+  display: block;
+  transition: var(--transition-duration);
+}
+.box:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+.box .caption {
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 32, 32);
+  position: absolute;
+  transition: var(--transition-duration);
+  bottom: -120%;
+  width: 100%;
+}
+.box:hover .caption {
+  bottom: 0;
+}
+.box .caption h4 {
+  font-weight: normal;
+}
+.box .caption p {
+  color: var(--main-color);
+}
+.more {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  width: fit-content;
+  display: block;
+  margin: 40px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: (--transition-duration);
+}
+.more:hover {
+  background-color: #0c4656;
 }
